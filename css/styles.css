@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Sarina&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("../pictures/indexachtergrond.jpg");
+}
+
+/*///////////////////////////////////////|
+-----------------navbar---------------   |
+/////////////////////////////////////////|*/
+
+.navbar {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(196, 33, 33);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid rgb(131, 0, 0);
+  z-index: 300000000000000000000000;
+}
+
+.navbar .linkjesnavbar {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+}
+
+.navbar .linkjesnavbar .linkjes {
+  display: flex;
+  height: auto;
+  width: 150px;
+  margin-left: 3px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+
+.navbar .linkjesnavbar .linkjes p {
+  height: fit-content;
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar .linkjesnavbar .linkjes p a {
+  color: black;
+}
+
+.navbar .linkjesnavbar .linkjes p a:hover {
+  transition: 0.5s;
+  color: rgb(255, 0, 0);
+}
+
+.plaatjenavbar {
+  cursor: pointer;
+  height: 65px;
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar .linkjesnavbar .linkjes {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar .linkjesnavbar .linkjes p {
+    font-size: 70%;
+  }
+  .navbar .linkjesnavbar .linkjes {
+    width: 65px;
+  }
+  .navbar {
+    height: 55px;
+  }
+  .plaatjenavbar {
+    height: 55px;
+  }
+}
+
+/*//////////////////////////////////////|
+-----------changing plaatjes------------|
+////////////////////////////////////////|*/
+.slideshow-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #717171;
+  height: 800px;
+}
+
+.slideshow-container .homepagePlaatjes {
+  height: 800px;
+  width: 100%;
+}
+
+.curved {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .slideshow-container .homepagePlaatjes,
+  .slideshow-container {
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .slideshow-container .homepagePlaatjes,
+  .slideshow-container {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .slideshow-container,
+  .slideshow-container .homepagePlaatjes {
+    height: 200px;
+  }
+}
+/*///////////////////////////////|
+----informatie over restourant---|
+/////////////////////////////////|*/
+
+.informatie {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 500px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.informatie .gegevens {
+  width: 250px;
+  min-height: 200px;
+  height: fit-content;
+}
+
+.informatie .gegevens h2 {
+  margin: 5px;
+  margin-bottom: 10px;
+  font-family: "Norican", cursive;
+}
+
+.informatie .gegevens .logo-tekst {
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.informatie .gegevens .logo-tekst p {
+  margin-left: 10px;
+}
+
+.informatie .gegevens .logo-tekst .adres-gegevens {
+  margin-left: 15px;
+}
+
+.informatie .gegevens .logo-tekst .routebeschrijving {
+  margin-left: 23px;
+}
+
+.informatie .gegevens h4 {
+  margin-bottom: 10px;
+}
+
+.informatie .openingstijden {
+  width: 250px;
+  min-height: 200px;
+  height: fit-content;
+}
+
+.informatie .openingstijden .tijden {
+  display: flex;
+}
+
+.informatie .prijzen {
+  width: 250px;
+  min-height: 200px;
+  height: fit-content;
+}
+
+.informatie .prijzen .mens-prijs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.informatie .prijzen .mens-prijs .soort-mens {
+  margin-right: 10px;
+}
+
+.informatie .gegevens h2,
+.informatie .openingstijden h2,
+.informatie .prijzen h2 {
+  color: rgb(196, 33, 33);
+  font-family: "Norican", cursive;
+}
+
+.informatie .gegevens p,
+.informatie .openingstijden p,
+.informatie .prijzen p {
+  color: orangered;
+}
+
+.informatie .gegevens h4,
+.informatie .openingstijden h4,
+.informatie .prijzen h4 {
+  color: crimson;
+}
+
+.informatie .prijzen h5 {
+  color: tomato;
+}
+
+.informatie .gegevens p:hover {
+  color: darkred;
+}
+
+@media only screen and (max-width: 767px) {
+  .informatie {
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .informatie .prijzen {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .informatie {
+    justify-content: center;
+  }
+  .informatie .gegevens {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/*////////////////////////////|
+----------footer--------------|
+//////////////////////////////|*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+.footer-distributed {
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  bottom: 0;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/*////////////////////////////////////|
+---------------menukaart--------------|
+//////////////////////////////////////|*/
+
+.curved1 {
+  background-color: white;
+  top: 0;
+}
+
+.menukaart {
+  background-color: grey;
+  min-height: 900px;
+  height: 100%;
+  width: 100%;
+}
+
+.menukaart h1 {
+  font-family: "Norican", cursive;
+  font-size: 300%;
+  color: crimson;
+}
+
+.menukaart .menutekst {
+  background-color: white;
+  display: flex;
+  min-width: 200px;
+  min-height: 20px;
+  height: 100%;
+  width: 70%;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menukaart .producten {
+  height: 600px;
+  width: 70%;
+  overflow-y: scroll;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menukaart .producten .lunchkaart {
+  min-height: 100px;
+  height: auto;
+  width: 100%;
+  background-color: rgb(168, 168, 168);
+}
+
+.menukaart .producten .lunchkaart .lunchtekst {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+}
+
+.menukaart .producten .lunchkaart .lunchtekst h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-family: "Norican", cursive;
+  color: crimson;
+}
+
+.menukaart .producten .lunchkaart .product {
+  background-color: green;
+  border: solid lightslategray 2px;
+  min-height: 100px;
+  height: auto;
+  width: 100%;
+}
