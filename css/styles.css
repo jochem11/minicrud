@@ -526,13 +526,15 @@ body {
   background-color: rgb(168, 168, 168);
 }
 
-.menukaart .producten .lunchkaart .lunchtekst {
+.menukaart .producten .lunchkaart .lunchtekst,
+.menukaart .producten .dinerkaart .dinertekst {
   background-color: white;
   width: 100%;
   height: fit-content;
 }
 
-.menukaart .producten .lunchkaart .lunchtekst h2 {
+.menukaart .producten .lunchkaart .lunchtekst h2,
+.menukaart .producten .dinerkaart .dinertekst h2 {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -540,10 +542,80 @@ body {
   color: crimson;
 }
 
-.menukaart .producten .lunchkaart .product {
-  background-color: green;
+.menukaart .producten .lunchkaart .product,
+.menukaart .producten .dinerkaart .product {
+  background-color: rgb(185, 185, 185);
   border: solid lightslategray 2px;
   min-height: 100px;
-  height: auto;
+  height: 100%;
   width: 100%;
+  display: flex;
+}
+
+.menukaart .producten .lunchkaart .product .producttekst,
+.menukaart .producten .dinerkaart .product .producttekst {
+  height: fit-content;
+  width: fit-content;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menukaart .producten .lunchkaart .product .producttekst h4,
+.menukaart .producten .dinerkaart .product .producttekst h4 {
+  margin-bottom: 10px;
+}
+
+.menukaart .producten .lunchkaart .product .producttekst p:hover,
+.menukaart .producten .dinerkaart .product .producttekst p:hover {
+  color: #666;
+  cursor: pointer;
+}
+
+.menukaart .producten .lunchkaart .product .productPlaatje,
+.menukaart .producten .dinerkaart .product .productPlaatje {
+  justify-content: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100px;
+  width: 100px;
+  border: solid gray 2px;
+}
+
+.menukaart .producten .lunchkaart .product .productprijs,
+.menukaart .producten .dinerkaart .product .productprijs {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+
+.menukaart .producten .lunchkaart .product .productprijs .productprijsknop,
+.menukaart .producten .dinerkaart .product .productprijs .productprijsknop {
+  height: fit-content;
+  width: fit-content;
+  background-color: #92999f;
+  border: solid #33383b 2px;
+  border-radius: 30%;
+}
+
+.menukaart
+  .producten
+  .lunchkaart
+  .product
+  .productprijs
+  .productprijsknop:hover,
+.menukaart
+  .producten
+  .dinerkaart
+  .product
+  .productprijs
+  .productprijsknop:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.menukaart .producten .lunchkaart .product .productprijs .productprijsknop p,
+.menukaart .producten .dinerkaart .product .productprijs .productprijsknop p {
+  margin: 10px;
 }
