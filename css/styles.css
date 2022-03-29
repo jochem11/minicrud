@@ -490,6 +490,7 @@ body {
   min-height: 900px;
   height: 100%;
   width: 100%;
+  padding-bottom: 100px;
 }
 
 .menukaart h1 {
@@ -618,4 +619,145 @@ body {
 .menukaart .producten .lunchkaart .product .productprijs .productprijsknop p,
 .menukaart .producten .dinerkaart .product .productprijs .productprijsknop p {
   margin: 10px;
+}
+
+/*///////////////////////////////|
+-----------reserveren------------|
+/////////////////////////////////|*/
+
+.reserveercontainer {
+  background-color: white;
+  width: 100%;
+  min-height: 1500px;
+  height: 100%;
+}
+
+.curved2 {
+  top: 0;
+  background-color: grey;
+}
+
+.reserveercontainer .grondvlak {
+  background-color: grey;
+  width: 80%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reserveercontainer .grondvlak .erea1 {
+  width: 100%;
+  height: 150px;
+  background-color: aqua;
+  top: 0;
+}
+
+.reserveercontainer .grondvlak .erea1 .rij1 {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.tafel {
+  background-color: greenyellow;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+}
+
+.tafel p {
+  margin: auto;
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.reserveercontainer .grondvlak .erea2 {
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+  display: flex;
+}
+
+.reserveercontainer .grondvlak .containeringang {
+  width: 10%;
+  border-right: solid black 3px;
+}
+
+.reserveercontainer .grondvlak .containeringang .ingang {
+  height: 150px;
+  width: 15px;
+  background-color: cadetblue;
+  display: flex;
+}
+
+.reserveercontainer .grondvlak .containeringang .ingang p {
+  transform: rotate(90deg);
+  margin-top: 30px;
+  height: 35px;
+  width: 0px;
+}
+
+.reserveercontainer .grondvlak .erea2 .rijen {
+  width: 90%;
+}
+
+.reserveercontainer .grondvlak .erea2 .rijen .rij1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid black 3px;
+  align-items: end;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.reserveercontainer .grondvlak .erea2 .rijen .rij2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.reserveercontainer .grondvlak .looppad {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(83, 97, 63);
+}
+
+.reserveercontainer .grondvlak .erea3 {
+  width: 100%;
+  height: 250px;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reserveercontainer .grondvlak .erea3 .box {
+  width: 25%;
+  height: 100%;
+  background-color: rgb(155, 155, 155);
+  padding: 5px;
+  border-right: solid black 2px;
+}
+
+.reserveercontainer .grondvlak .erea3 .box .boxen {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  background-color: #717171;
+  justify-content: space-between;
+}
+
+.reserveercontainer .grondvlak .erea3 .box .onder {
+  margin-top: 140px;
 }

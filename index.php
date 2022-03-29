@@ -317,7 +317,6 @@
        
       </div>
       <div class="menukaart">
-        <div>
         <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 318"
@@ -482,6 +481,105 @@
       </div>
 
     </div>
+    <div class="reserveercontainer">
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 318"
+      class="curved2"
+    >
+      <path
+        fill="white"
+        fill-opacity="1"
+        d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,117.3C560,117,640,171,720,165.3C800,160,880,96,960,96C1040,96,1120,160,1200,170.7C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+      ></path>
+    </svg>
+    <div class="grondvlak">
+      <div class="erea1">
+        <div class="rij1">
+          <div class="tafel"><p>1</p></div>
+          <div class="tafel"><p>2</p></div>
+          <div class="tafel"><p>3</p></div>
+          <div class="tafel"><p>4</p></div>
+          <div class="tafel"><p>5</p></div>
+          <div class="tafel"><p>6</p></div>
+          <div class="tafel"><p>7</p></div>
+          <div class="tafel"><p>8</p></div>
+          <div class="tafel"><p>9</p></div>
+      </div>
+      </div>
+      <div class="erea2">
+        <div class="containeringang">
+          <div class="ingang"><p>ingang</p></div>
+        </div>
+        <div class="rijen">
+        <div class="rij1">
+          <div class="tafel"><p>10</p></div>
+          <div class="tafel"><p>11</p></div>
+          <div class="tafel"><p>12</p></div>
+          <div class="tafel"><p>13</p></div>
+          <div class="tafel"><p>14</p></div>
+          <div class="tafel"><p>15</p></div>
+          <div class="tafel"><p>16</p></div>
+          <div class="tafel"><p>17</p></div>
+        </div>
+        <div class="rij2">
+          <div class="tafel"><p>18</p></div>
+          <div class="tafel"><p>19</p></div>
+          <div class="tafel"><p>20</p></div>
+          <div class="tafel"><p>13</p></div>
+          <div class="tafel"><p>21</p></div>
+          <div class="tafel"><p>22</p></div>
+          <div class="tafel"><p>23</p></div>
+          <div class="tafel"><p>24</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="looppad"></div>
+    <div class="erea3">
+      <div class="box">
+        <div class="boxen">
+        <div class="tafel"><p>25</p></div>
+        <div class="tafel"><p>26</p></div>
+      </div>
+      <div class="boxen onder">
+        <div class="tafel"><p>27</p></div>
+        <div class="tafel"><p>28</p></div>
+      </div>
+      </div>
+      <div class="box">
+        <div class="boxen">
+          <div class="tafel"><p>29</p></div>
+          <div class="tafel"><p>30</p></div>
+        </div>
+        <div class="boxen onder">
+          <div class="tafel"><p>31</p></div>
+          <div class="tafel"><p>32</p></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="boxen">
+          <div class="tafel"><p>33</p></div>
+          <div class="tafel"><p>34</p></div>
+        </div>
+        <div class="boxen onder">
+          <div class="tafel"><p>35</p></div>
+          <div class="tafel"><p>36</p></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="boxen">
+          <div class="tafel"><p>37</p></div>
+          <div class="tafel"><p>38</p></div>
+        </div>
+        <div class="boxen onder">
+          <div class="tafel"><p>39</p></div>
+          <div class="tafel"><p>40</p></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
       
 
 
