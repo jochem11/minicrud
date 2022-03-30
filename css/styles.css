@@ -621,6 +621,31 @@ body {
   margin: 10px;
 }
 
+@media only screen and (max-width: 500px) {
+  .menukaart .menutekst {
+    width: 95%;
+  }
+  .menukaart .producten {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .menukaart .producten .lunchkaart .product,
+  .menukaart .producten .dinerkaart .product {
+    min-height: 70px;
+  }
+  .menukaart .producten .lunchkaart .product .productPlaatje,
+  .menukaart .producten .dinerkaart .product .productPlaatje {
+    height: 70px;
+    width: 70px;
+  }
+  .menukaart .producten .lunchkaart .product .productprijs .productprijsknop p,
+  .menukaart .producten .dinerkaart .product .productprijs .productprijsknop p {
+    margin: 5px;
+  }
+}
+
 /*///////////////////////////////|
 -----------reserveren------------|
 /////////////////////////////////|*/
