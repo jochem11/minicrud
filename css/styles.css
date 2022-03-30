@@ -786,3 +786,90 @@ body {
 .reserveercontainer .grondvlak .erea3 .box .onder {
   margin-top: 140px;
 }
+
+@media only screen and (max-width: 800px) {
+  .reserveercontainer .grondvlak .erea1 {
+    height: 100px;
+  }
+  .reserveercontainer .grondvlak .erea3 {
+    height: 140px;
+  }
+  .reserveercontainer .grondvlak .erea3 .box .onder {
+    margin-top: 50px;
+  }
+  .tafel {
+    height: 40px;
+    width: 40px;
+  }
+  .reserveercontainer .grondvlak .erea1 .rij1 {
+    height: 40px;
+  }
+  .reserveercontainer .grondvlak .looppad {
+    height: 30px;
+  }
+  .reserveercontainer .grondvlak {
+    height: 350px;
+  }
+  .reserveercontainer .grondvlak .erea2 {
+    height: 80px;
+  }
+  .reserveercontainer .grondvlak .containeringang .ingang {
+    height: 80px;
+  }
+  .reserveercontainer .grondvlak .containeringang .ingang p {
+    margin-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .reserveercontainer .grondvlak {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .tafel {
+    width: 25px;
+    height: 25px;
+  }
+  .reserveercontainer .grondvlak .erea1 {
+    height: 60px;
+  }
+  .reserveercontainer .grondvlak .erea3 .box .onder {
+    margin-top: 40px;
+  }
+  .reserveercontainer .grondvlak .erea3 {
+    height: 110px;
+  }
+  .reserveercontainer .grondvlak {
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .tafel {
+    width: 20px;
+    height: 20px;
+  }
+  .reserveercontainer .grondvlak .erea2 {
+    height: 60px;
+  }
+  .reserveercontainer .grondvlak .containeringang .ingang {
+    height: 60px;
+  }
+  .reserveercontainer .grondvlak .containeringang .ingang p {
+    margin-top: -5px;
+  }
+  .reserveercontainer .grondvlak .looppad {
+    height: 25px;
+  }
+  .reserveercontainer .grondvlak .erea1 {
+    height: 50px;
+  }
+  .reserveercontainer .grondvlak .erea3 {
+    height: 90px;
+  }
+  .reserveercontainer .grondvlak {
+    height: 220px;
+  }
+}
