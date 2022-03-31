@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Sarina&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Norican&display=swap");
 
 * {
   margin: 0;
@@ -653,8 +654,26 @@ body {
 .reserveercontainer {
   background-color: white;
   width: 100%;
-  min-height: 1500px;
+  height: fit-content;
+  padding-bottom: 100px;
+}
+
+.reserveercontainer .reserveertekst {
+  background-color: white;
+  display: flex;
+  min-width: 200px;
+  min-height: 20px;
   height: 100%;
+  width: 70%;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reserveercontainer h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 300%;
+  color: crimson;
 }
 
 .curved2 {
@@ -873,3 +892,6 @@ body {
     height: 220px;
   }
 }
+/*/////////////////////////////////|
+ ---------------contact-------------|
+ ///////////////////////////////////|*/

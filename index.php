@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Norican&display=swap" rel="stylesheet">
   </head>
   <body>
     <?php
@@ -493,6 +496,7 @@
         d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,117.3C560,117,640,171,720,165.3C800,160,880,96,960,96C1040,96,1120,160,1200,170.7C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
       ></path>
     </svg>
+    <div class="reserveertekst"><h1>reserveren</h1></div>
     <div class="grondvlak">
       <div class="erea1">
         <div class="rij1">
@@ -577,6 +581,9 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="contact">
+
     </div>
     </div>
 
