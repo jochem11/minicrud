@@ -499,12 +499,30 @@
     <div class="reserveertekst"><h1>reserveren</h1></div>
     <div class="grondvlak">
       <div class="reserveerform">
-        
+        <form action="" method="post">
+           <div class="naamaantaltel-form">
+             <div class="naam-form">
+              <label for="naam">naam</label> </br>
+              <input type="text" name="naam" id="naam" placeholder="naam: "> </br>
+             </div>
+             <div class="aantal-form">
+              <label for="aantal">aantal personen</label> </br>
+              <input type="number" name="aantal" id="aantal" placeholder="aantal: "> </br>
+            </div>
+            <div class="tel-form">
+            <label for="tel">telefoonnummer</label> </br>
+            <input type="tel" name="tel" id="tel" placeholder="telefoonnummer: "></br>
+          </div>
+        </div>
+          <label for="bericht">bericht</label> </br>
+          <textarea name="bericht" id="" cols="30" rows="10" placeholder="bericht: (niet verplicht) "></textarea> </br>
+          <input type="submit" name="verzend" placeholder="verzend">
+        </form>
       </div>
       <div class="reserveererea">
       <div class="erea1">
         <div class="rij1">
-          <div class="tafel"><p>1</p></div>
+          <div class="tafel" id="tafel-1"><p>1</p></div>
           <div class="tafel"><p>2</p></div>
           <div class="tafel"><p>3</p></div>
           <div class="tafel"><p>4</p></div>
