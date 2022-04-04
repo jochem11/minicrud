@@ -498,6 +498,7 @@
     </svg>
     <div class="reserveertekst"><h1>reserveren</h1></div>
     <div class="grondvlak">
+      <div class="reserveererea">
       <div class="erea1">
         <div class="rij1">
           <div class="tafel"><p>1</p></div>
@@ -582,8 +583,33 @@
       </div>
     </div>
     </div>
+  </div>
+    </div>
     <div class="contact">
-
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 318"
+      class="curved3"
+      >
+      <path
+        fill="grey"
+        fill-opacity="1"
+        d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,117.3C560,117,640,171,720,165.3C800,160,880,96,960,96C1040,96,1120,160,1200,170.7C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+      ></path>
+    </svg>
+    <div class="contactvlak">
+      <div class="contacttekst"><h1>contact</h1></div>
+      <div class="contactform">
+        <form action="" method="post">
+          <label for="naam">naam: </label> </br>
+          <input type="text" name="naam" id="naam" placeholder="naam:"> </br>
+          <label for="e-mail">e-mail: </label> </br>
+          <input type="email" name="e-mail" id="e-mail" placeholder="e-mail"> </br>
+          <label for="bericht">bericht</label> </br>
+          <textarea name="bericht" id="bericht" cols="30" rows="10" placeholder="bericht:"></textarea> </br>
+          <input type="submit" placeholder="verzenden" name="verzend">
+        </form>
+      </div>
     </div>
     </div>
 

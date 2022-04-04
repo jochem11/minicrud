@@ -655,7 +655,6 @@ body {
   background-color: white;
   width: 100%;
   height: fit-content;
-  padding-bottom: 100px;
 }
 
 .reserveercontainer .reserveertekst {
@@ -681,7 +680,7 @@ body {
   background-color: grey;
 }
 
-.reserveercontainer .grondvlak {
+.reserveercontainer .grondvlak .reserveererea {
   background-color: grey;
   width: 80%;
   height: 600px;
@@ -689,14 +688,14 @@ body {
   margin-right: auto;
 }
 
-.reserveercontainer .grondvlak .erea1 {
+.reserveercontainer .grondvlak .reserveererea .erea1 {
   width: 100%;
   height: 150px;
   background-color: aqua;
   top: 0;
 }
 
-.reserveercontainer .grondvlak .erea1 .rij1 {
+.reserveercontainer .grondvlak .reserveererea .erea1 .rij1 {
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -720,37 +719,37 @@ body {
   margin-bottom: auto;
 }
 
-.reserveercontainer .grondvlak .erea2 {
+.reserveercontainer .grondvlak .reserveererea .erea2 {
   width: 100%;
   height: 150px;
   background-color: blue;
   display: flex;
 }
 
-.reserveercontainer .grondvlak .containeringang {
+.reserveercontainer .grondvlak .reserveererea .containeringang {
   width: 10%;
   border-right: solid black 3px;
 }
 
-.reserveercontainer .grondvlak .containeringang .ingang {
+.reserveercontainer .grondvlak .reserveererea .containeringang .ingang {
   height: 150px;
   width: 15px;
   background-color: cadetblue;
   display: flex;
 }
 
-.reserveercontainer .grondvlak .containeringang .ingang p {
+.reserveercontainer .grondvlak .reserveererea .containeringang .ingang p {
   transform: rotate(90deg);
   margin-top: 30px;
   height: 35px;
   width: 0px;
 }
 
-.reserveercontainer .grondvlak .erea2 .rijen {
+.reserveercontainer .grondvlak .reserveererea .erea2 .rijen {
   width: 90%;
 }
 
-.reserveercontainer .grondvlak .erea2 .rijen .rij1 {
+.reserveercontainer .grondvlak .reserveererea .erea2 .rijen .rij1 {
   width: 100%;
   height: 50%;
   display: flex;
@@ -762,7 +761,7 @@ body {
   padding-right: 5px;
 }
 
-.reserveercontainer .grondvlak .erea2 .rijen .rij2 {
+.reserveercontainer .grondvlak .reserveererea .erea2 .rijen .rij2 {
   width: 100%;
   height: 50%;
   display: flex;
@@ -772,13 +771,13 @@ body {
   padding-left: 5px;
 }
 
-.reserveercontainer .grondvlak .looppad {
+.reserveercontainer .grondvlak .reserveererea .looppad {
   width: 100%;
   height: 50px;
   background-color: rgb(83, 97, 63);
 }
 
-.reserveercontainer .grondvlak .erea3 {
+.reserveercontainer .grondvlak .reserveererea .erea3 {
   width: 100%;
   height: 250px;
   background-color: cornflowerblue;
@@ -786,7 +785,7 @@ body {
   justify-content: space-between;
 }
 
-.reserveercontainer .grondvlak .erea3 .box {
+.reserveercontainer .grondvlak .reserveererea .erea3 .box {
   width: 25%;
   height: 100%;
   background-color: rgb(155, 155, 155);
@@ -794,7 +793,7 @@ body {
   border-right: solid black 2px;
 }
 
-.reserveercontainer .grondvlak .erea3 .box .boxen {
+.reserveercontainer .grondvlak .reserveererea .erea3 .box .boxen {
   display: flex;
   height: fit-content;
   width: 100%;
@@ -802,46 +801,46 @@ body {
   justify-content: space-between;
 }
 
-.reserveercontainer .grondvlak .erea3 .box .onder {
+.reserveercontainer .grondvlak .reserveererea .erea3 .box .onder {
   margin-top: 140px;
 }
 
 @media only screen and (max-width: 800px) {
-  .reserveercontainer .grondvlak .erea1 {
+  .reserveercontainer .grondvlak .reserveererea .erea1 {
     height: 100px;
   }
-  .reserveercontainer .grondvlak .erea3 {
+  .reserveercontainer .grondvlak .reserveererea .erea3 {
     height: 140px;
   }
-  .reserveercontainer .grondvlak .erea3 .box .onder {
+  .reserveercontainer .grondvlak .reserveererea .erea3 .box .onder {
     margin-top: 50px;
   }
   .tafel {
     height: 40px;
     width: 40px;
   }
-  .reserveercontainer .grondvlak .erea1 .rij1 {
+  .reserveercontainer .grondvlak .reserveererea .erea1 .rij1 {
     height: 40px;
   }
-  .reserveercontainer .grondvlak .looppad {
+  .reserveercontainer .grondvlak .reserveererea .looppad {
     height: 30px;
   }
-  .reserveercontainer .grondvlak {
+  .reserveercontainer .grondvlak .reserveererea {
     height: 350px;
   }
-  .reserveercontainer .grondvlak .erea2 {
+  .reserveercontainer .grondvlak .reserveererea .erea2 {
     height: 80px;
   }
-  .reserveercontainer .grondvlak .containeringang .ingang {
+  .reserveercontainer .grondvlak .reserveererea .containeringang .ingang {
     height: 80px;
   }
-  .reserveercontainer .grondvlak .containeringang .ingang p {
+  .reserveercontainer .grondvlak .reserveererea .containeringang .ingang p {
     margin-top: 8px;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .reserveercontainer .grondvlak {
+  .reserveercontainer .grondvlak .reserveererea {
     width: 95%;
   }
 }
@@ -851,16 +850,16 @@ body {
     width: 25px;
     height: 25px;
   }
-  .reserveercontainer .grondvlak .erea1 {
+  .reserveercontainer .grondvlak .reserveererea .erea1 {
     height: 60px;
   }
-  .reserveercontainer .grondvlak .erea3 .box .onder {
+  .reserveercontainer .grondvlak .reserveererea .erea3 .box .onder {
     margin-top: 40px;
   }
-  .reserveercontainer .grondvlak .erea3 {
+  .reserveercontainer .grondvlak .reserveererea .erea3 {
     height: 110px;
   }
-  .reserveercontainer .grondvlak {
+  .reserveercontainer .grondvlak .reserveererea {
     height: 280px;
   }
 }
@@ -870,28 +869,115 @@ body {
     width: 20px;
     height: 20px;
   }
-  .reserveercontainer .grondvlak .erea2 {
+  .reserveercontainer .grondvlak .reserveererea .erea2 {
     height: 60px;
   }
-  .reserveercontainer .grondvlak .containeringang .ingang {
+  .reserveercontainer .grondvlak .reserveererea .containeringang .ingang {
     height: 60px;
   }
-  .reserveercontainer .grondvlak .containeringang .ingang p {
+  .reserveercontainer .grondvlak .reserveererea .containeringang .ingang p {
     margin-top: -5px;
   }
-  .reserveercontainer .grondvlak .looppad {
+  .reserveercontainer .grondvlak .reserveererea .looppad {
     height: 25px;
   }
-  .reserveercontainer .grondvlak .erea1 {
+  .reserveercontainer .grondvlak .reserveererea .erea1 {
     height: 50px;
   }
-  .reserveercontainer .grondvlak .erea3 {
+  .reserveercontainer .grondvlak .reserveererea .erea3 {
     height: 90px;
   }
-  .reserveercontainer .grondvlak {
+  .reserveercontainer .grondvlak .reserveererea {
     height: 220px;
   }
 }
-/*/////////////////////////////////|
+/*//////////////////////////////////|
  ---------------contact-------------|
  ///////////////////////////////////|*/
+
+.curved3 {
+  top: 0;
+  background-color: white;
+}
+
+.contact {
+  background-color: grey;
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.contact .contactvlak {
+  width: 80%;
+  min-height: 600px;
+  height: 100%;
+  background-color: #92999f;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.contact .contactvlak .contacttekst {
+  background-color: #92999f;
+  display: flex;
+  min-width: 200px;
+  min-height: 20px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50px;
+}
+
+.contact .contactvlak .contacttekst h1 {
+  background-color: #92999f;
+  font-family: "Norican", cursive;
+  font-size: 300%;
+  color: crimson;
+}
+
+.contact .contactvlak .contactform {
+  background-color: #92999f;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+}
+
+.contact .contactvlak .contactform input[type="text"],
+.contact .contactvlak .contactform input[type="email"],
+.contact .contactvlak .contactform textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.contact .contactvlak .contactform input[type="submit"] {
+  background-color: crimson;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact .contactvlak .contactform input[type="submit"]:hover {
+  background-color: firebrick;
+}
+
+.contact .contactvlak .contactform textarea {
+  resize: none;
+}
+
+.contact .contactvlak .contactform label {
+  font-family: "Norican", cursive;
+  font-size: 130%;
+  color: crimson;
+  padding-left: 5px;
+}
