@@ -498,6 +498,9 @@
     </svg>
     <div class="reserveertekst"><h1>reserveren</h1></div>
     <div class="grondvlak">
+      <div class="reserveerform">
+        
+      </div>
       <div class="reserveererea">
       <div class="erea1">
         <div class="rij1">
@@ -581,8 +584,13 @@
           <div class="tafel"><p>40</p></div>
         </div>
       </div>
+      
+      
+
     </div>
+
     </div>
+
   </div>
     </div>
     <div class="contact">

@@ -680,10 +680,19 @@ body {
   background-color: grey;
 }
 
-.reserveercontainer .grondvlak .reserveererea {
+.reserveercontainer .grondvlak {
   background-color: grey;
   width: 80%;
   height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reserveercontainer .grondvlak .reserveererea {
+  background-color: grey;
+  width: 100%;
+  height: 600px;
+  z-index: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -890,6 +899,15 @@ body {
   .reserveercontainer .grondvlak .reserveererea {
     height: 220px;
   }
+}
+
+.reserveercontainer .grondvlak .reserveerform {
+  background-color: rgb(215, 148, 148);
+  width: 80%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
 }
 /*//////////////////////////////////|
  ---------------contact-------------|
