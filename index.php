@@ -514,23 +514,31 @@
             <input type="tel" name="tel" id="tel" placeholder="telefoonnummer: "></br>
           </div>
         </div>
-          <label for="bericht">bericht</label> </br>
-          <textarea name="bericht" id="" cols="30" rows="10" placeholder="bericht: (niet verplicht) "></textarea> </br>
+          <div class="berichttijd-form">
+            <div class="bericht">
+             <label for="bericht">bericht</label> </br>
+             <textarea name="bericht" id="" cols="30" rows="10" placeholder="bericht: (niet verplicht) "></textarea> </br>
+            </div>
+            <div class="tijd">
+            <label for="date">tijd-datum</label> </br>
+            <input type="datetime-local" name="date" id="date">
+          </div>
+        </div>
           <input type="submit" name="verzend" placeholder="verzend">
         </form>
       </div>
       <div class="reserveererea">
       <div class="erea1">
         <div class="rij1">
-          <div class="tafel" id="tafel-1"><p>1</p></div>
-          <div class="tafel"><p>2</p></div>
-          <div class="tafel"><p>3</p></div>
-          <div class="tafel"><p>4</p></div>
-          <div class="tafel"><p>5</p></div>
-          <div class="tafel"><p>6</p></div>
-          <div class="tafel"><p>7</p></div>
-          <div class="tafel"><p>8</p></div>
-          <div class="tafel"><p>9</p></div>
+          <div class="tafel" data-id="tafel-1"><p>1</p></div>
+          <div class="tafel" data-id="tafel-2"><p>2</p></div>
+          <div class="tafel" data-id="tafel-3"><p>3</p></div>
+          <div class="tafel" data-id="tafel-4"><p>4</p></div>
+          <div class="tafel" data-id="tafel-5"><p>5</p></div>
+          <div class="tafel" data-id="tafel-6"><p>6</p></div>
+          <div class="tafel" data-id="tafel-7"><p>7</p></div>
+          <div class="tafel" data-id="tafel-8"><p>8</p></div>
+          <div class="tafel" data-id="tafel-9"><p>9</p></div>
       </div>
       </div>
       <div class="erea2">
@@ -539,24 +547,24 @@
         </div>
         <div class="rijen">
         <div class="rij1">
-          <div class="tafel"><p>10</p></div>
-          <div class="tafel"><p>11</p></div>
-          <div class="tafel"><p>12</p></div>
-          <div class="tafel"><p>13</p></div>
-          <div class="tafel"><p>14</p></div>
-          <div class="tafel"><p>15</p></div>
-          <div class="tafel"><p>16</p></div>
-          <div class="tafel"><p>17</p></div>
+          <div class="tafel" data-id="tafel-10"><p>10</p></div>
+          <div class="tafel" data-id="tafel-11"><p>11</p></div>
+          <div class="tafel" data-id="tafel-12"><p>12</p></div>
+          <div class="tafel" data-id="tafel-13"><p>13</p></div>
+          <div class="tafel" data-id="tafel-14"><p>14</p></div>
+          <div class="tafel" data-id="tafel-15"><p>15</p></div>
+          <div class="tafel" data-id="tafel-16"><p>16</p></div>
+          <div class="tafel" data-id="tafel-17"><p>17</p></div>
         </div>
         <div class="rij2">
-          <div class="tafel"><p>18</p></div>
-          <div class="tafel"><p>19</p></div>
-          <div class="tafel"><p>20</p></div>
-          <div class="tafel"><p>13</p></div>
-          <div class="tafel"><p>21</p></div>
-          <div class="tafel"><p>22</p></div>
-          <div class="tafel"><p>23</p></div>
-          <div class="tafel"><p>24</p></div>
+          <div class="tafel" data-id="tafel-18"><p>18</p></div>
+          <div class="tafel" data-id="tafel-19"><p>19</p></div>
+          <div class="tafel" data-id="tafel-20"><p>20</p></div>
+          <div class="tafel" data-id="tafel-21"><p>21</p></div>
+          <div class="tafel" data-id="tafel-22"><p>22</p></div>
+          <div class="tafel" data-id="tafel-23"><p>23</p></div>
+          <div class="tafel" data-id="tafel-24"><p>24</p></div>
+          <div class="tafel" data-id="tafel-25"><p>25</p></div>
         </div>
       </div>
     </div>
@@ -564,42 +572,42 @@
     <div class="erea3">
       <div class="box">
         <div class="boxen">
-        <div class="tafel"><p>25</p></div>
-        <div class="tafel"><p>26</p></div>
+        <div class="tafel" data-id="tafel-26"><p>26</p></div>
+        <div class="tafel" data-id="tafel-27"><p>27</p></div>
       </div>
       <div class="boxen onder">
-        <div class="tafel"><p>27</p></div>
-        <div class="tafel"><p>28</p></div>
+        <div class="tafel" data-id="tafel-28"><p>28</p></div>
+        <div class="tafel" data-id="tafel-29"><p>29</p></div>
       </div>
       </div>
       <div class="box">
         <div class="boxen">
-          <div class="tafel"><p>29</p></div>
-          <div class="tafel"><p>30</p></div>
+          <div class="tafel" data-id="tafel-30"><p>30</p></div>
+          <div class="tafel" data-id="tafel-31"><p>31</p></div>
         </div>
         <div class="boxen onder">
-          <div class="tafel"><p>31</p></div>
-          <div class="tafel"><p>32</p></div>
+          <div class="tafel" data-id="tafel-32"><p>32</p></div>
+          <div class="tafel" data-id="tafel-33"><p>33</p></div>
         </div>
       </div>
       <div class="box">
         <div class="boxen">
-          <div class="tafel"><p>33</p></div>
-          <div class="tafel"><p>34</p></div>
+          <div class="tafel" data-id="tafel-34"><p>34</p></div>
+          <div class="tafel" data-id="tafel-35"><p>35</p></div>
         </div>
         <div class="boxen onder">
-          <div class="tafel"><p>35</p></div>
-          <div class="tafel"><p>36</p></div>
+          <div class="tafel" data-id="tafel-36"><p>36</p></div>
+          <div class="tafel" data-id="tafel-37"><p>37</p></div>
         </div>
       </div>
       <div class="box">
         <div class="boxen">
-          <div class="tafel"><p>37</p></div>
-          <div class="tafel"><p>38</p></div>
+          <div class="tafel" data-id="tafel-38"><p>38</p></div>
+          <div class="tafel" data-id="tafel-39"><p>39</p></div>
         </div>
         <div class="boxen onder">
-          <div class="tafel"><p>39</p></div>
-          <div class="tafel"><p>40</p></div>
+          <div class="tafel" data-id="tafel-40"><p>40</p></div>
+          <div class="tafel" data-id="tafel-41"><p>41</p></div>
         </div>
       </div>
       

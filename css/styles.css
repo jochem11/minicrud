@@ -902,18 +902,19 @@ body {
 }
 
 .reserveercontainer .grondvlak .reserveerform {
-background-color: white;  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 80%;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  opacity: 0.8;
+  z-index: 100;
   display: none;
 }
 
-.reserveercontainer .grondvlak .reserveerform input[type=text],
- .reserveercontainer .grondvlak .reserveerform input[type=number],
-  .reserveercontainer .grondvlak .reserveerform input[type=tel] {
+.reserveercontainer .grondvlak .reserveerform input[type="text"],
+.reserveercontainer .grondvlak .reserveerform input[type="number"],
+.reserveercontainer .grondvlak .reserveerform input[type="tel"] {
   width: 80%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -937,10 +938,10 @@ background-color: white;  width: 80%;
   margin-bottom: 10px;
   margin-left: 25px;
   resize: none;
-  width: 80%;
+  width: 90%;
 }
 
-.reserveercontainer .grondvlak .reserveerform input[type=submit] {
+.reserveercontainer .grondvlak .reserveerform input[type="submit"] {
   background-color: crimson;
   color: white;
   padding: 12px 20px;
@@ -959,6 +960,17 @@ background-color: white;  width: 80%;
   display: block;
 }
 
+.reserveercontainer .grondvlak .reserveerform .berichttijd-form {
+  display: flex;
+  width: 100%;
+}
+
+.reserveercontainer .grondvlak .reserveerform input[type="datetime-local"] {
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 800px) {
   .reserveercontainer .grondvlak .reserveerform {
     height: 350px;
@@ -969,12 +981,9 @@ background-color: white;  width: 80%;
   .reserveercontainer .grondvlak {
     height: 350px;
   }
-  .reserveercontainer .grondvlak .reserveerform textarea {
-    width: 95%;
-  }
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width: 700px) {
   .reserveercontainer .grondvlak .reserveerform {
     width: 95%;
   }
@@ -984,15 +993,15 @@ background-color: white;  width: 80%;
   .reserveercontainer .grondvlak .reserveerform label {
     font-size: 100%;
   }
-  .reserveercontainer .grondvlak .reserveerform input[type=text],
-   .reserveercontainer .grondvlak .reserveerform input[type=number],
-    .reserveercontainer .grondvlak .reserveerform input[type=tel] {
+  .reserveercontainer .grondvlak .reserveerform input[type="text"],
+  .reserveercontainer .grondvlak .reserveerform input[type="number"],
+  .reserveercontainer .grondvlak .reserveerform input[type="tel"] {
     padding: 5px;
   }
   .reserveercontainer .grondvlak .reserveerform textarea {
     height: 130px;
   }
-  .reserveercontainer .grondvlak .reserveerform input[type=submit] {
+  .reserveercontainer .grondvlak .reserveerform input[type="submit"] {
     padding: 8px 12px;
   }
   .reserveercontainer .grondvlak .reserveerform {
@@ -1004,9 +1013,9 @@ background-color: white;  width: 80%;
 }
 
 @media only screen and (max-width: 400px) {
-  .reserveercontainer .grondvlak .reserveerform input[type=text],
-    .reserveercontainer .grondvlak .reserveerform input[type=number],
-      .reserveercontainer .grondvlak .reserveerform input[type=tel] {
+  .reserveercontainer .grondvlak .reserveerform input[type="text"],
+  .reserveercontainer .grondvlak .reserveerform input[type="number"],
+  .reserveercontainer .grondvlak .reserveerform input[type="tel"] {
     margin-top: 3px;
     margin-bottom: 3px;
     margin-left: 10px;
@@ -1023,7 +1032,7 @@ background-color: white;  width: 80%;
   .reserveercontainer .grondvlak {
     height: 220px;
   }
-  .reserveercontainer .grondvlak .reserveerform input[type=submit] {
+  .reserveercontainer .grondvlak .reserveerform input[type="submit"] {
     margin-left: 10px;
   }
   .reserveercontainer .grondvlak .reserveerform label {

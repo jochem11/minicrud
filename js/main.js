@@ -36,3 +36,13 @@ function scrollFunction() {
   }
 }
 
+const tafels = document.querySelectorAll(".tafel");
+
+tafels.forEach((tafel) => {
+  tafel.addEventListener("click", (e) => {
+    const dataAttribute = tafel.getAttribute("data-id");
+    console.log(dataAttribute);
+    document.querySelector(".reserveerform").style.display = "block";
+    tafel.style.backgroundColor = "orange";
+  });
+});
