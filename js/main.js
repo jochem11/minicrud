@@ -37,6 +37,8 @@ function scrollFunction() {
 }
 
 const tafels = document.querySelectorAll(".tafel");
+const divcontainer = document.querySelector(".reserveercontainer");
+const divform = document.querySelector(".reserveerform");
 
 tafels.forEach((tafel) => {
   tafel.addEventListener("click", (e) => {
@@ -44,5 +46,11 @@ tafels.forEach((tafel) => {
     console.log(dataAttribute);
     document.querySelector(".reserveerform").style.display = "block";
     tafel.style.backgroundColor = "orange";
+    window.onclick = (e) => {
+      if (e.target === divcontainer) {
+        divform.style.display = "none";
+        tafel.style.backgroundColor = "greenyellow";
+      }
+    };
   });
 });

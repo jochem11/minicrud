@@ -524,7 +524,7 @@
             <input type="datetime-local" name="date" id="date">
           </div>
         </div>
-          <input type="submit" name="verzend" placeholder="verzend">
+          <input type="submit" name="verzend" value="verzenden">
         </form>
       </div>
       <div class="reserveererea">

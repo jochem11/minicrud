@@ -21,11 +21,11 @@ body {
 .navbar {
   height: 65px;
   width: 100%;
-  background-color: rgb(196, 33, 33);
+  background-color: transparent;
   position: fixed;
   display: flex;
   justify-content: center;
-  border-bottom: 3px solid rgb(131, 0, 0);
+  border-bottom: 3px solid transparent;
   z-index: 300000000000000000000000;
 }
 
