@@ -247,7 +247,7 @@
             </div>
             <div class="tijd2">
               <p>
-                09:00 - 13:00 <br/>
+                10:00 - 13:00 <br/>
                 13:00 - 23:00
               </p>
             </div>
@@ -262,7 +262,7 @@
             </div>
             <div class="tijd2">
               <p>
-                09:00 - 13:00 <br/>
+                10:00 - 13:00 <br/>
                 13:00 - 23:00
               </p>
             </div>
@@ -521,10 +521,11 @@
             </div>
             <div class="tijd">
             <label for="date">tijd-datum</label> </br>
-            <input type="datetime-local" name="date" id="date">
+            <input type="datetime-local" name="date" id="date" min="2022-12-04T10:00" max="2023-12-31T23:00">
           </div>
         </div>
           <input type="submit" name="verzend" value="verzenden">
+          <input type="hidden" value="" id="hidden_input" name="data-id">
         </form>
       </div>
       <div class="reserveererea">
