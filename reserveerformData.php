@@ -2,30 +2,20 @@
 
 include("connect.php");
 
-global $conn;
+$sql = "INSERT INTO reserveringen (naam, aantal, telefoonnummer, bericht, datum, tafel) VALUES (:naam,:aantal, :tel, :bericht, :date, :dataid)";
 
-if (isset($_POST['submit'])) {
-    $name = $_POST['naam'];
-    $mensen = $_POST['aantal'];
-    $telefoonnumber = $_POST['tel'];
-    $text = $_POST['bericht'];
-    $datetime = $_POST['date'];
-    $tafel = $_POST['data-id'];
-    if ($name == '' || $mensen == '') {
-        $error = '';
-    } else {
-        if (is_numeric($mensen)) {
-            if ($mensen > 20 || $mensen <= 0) {
-                $error = "";
-            } else {
-                $error = "Reservering geplaats";
-                $sql = "INSERT INTO reserveringen (naam, aantal, telefoonnummer, bericht, datum, tafel) VALUES ('$name', '$mensen', '$telefoonnumber', '$mensen', '$text', '$datetime', '$tafel')";
-                $conn->exec($sql);
-            }
-        } else {
-            $error = '';
-        }
-    }
-}
+$stmt = $connect->prepare($sql);
 
+$stmt->bindParam(":naam", $_POST['naam']);
 
+$stmt->bindParam(":aantal", $_POST['aantal']);
+
+$stmt->bindParam(":tel", $_POST['tel']);
+
+$stmt->bindParam(":bericht", $_POST['bericht']);
+
+$stmt->bindParam(":date", $_POST['date']);
+
+$stmt->bindParam(":dataid", $_POST['dataid']);
+
+$stmt->execute();

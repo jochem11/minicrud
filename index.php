@@ -334,102 +334,61 @@
       <div class="menutekst"><h1>menukaart</h1></div>
       <div class="producten">
         <div class="lunchkaart">
-          <div class="lunchtekst"><h2>lunchkaart</h2></div>
-          <div class="product">
-              <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
+        <div class="lunchtekst"><h2>lunchkaart</h2></div>
+
+          <?php
+            include_once("connect.php");
+
+            $query = "SELECT * FROM lunchgerechten";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+
+            foreach($result as $product) {
+          ?>
+            <div class="product">
+              <img src="<?php echo $product['plaatje']; ?>" alt="#">
               <div class="producttekst">
-              <h4>product1</h4>
-              <p>heel lekker sushi</p>
+               <h4><?php echo $product['naam']?></h4>
+               <p><?php echo $product['beschrijving']?></p>
+              </div>
+             <div class="productprijs">
+              <div class="productprijsknop"><p>&euro;<?php echo $product["prijs"]?></p></div>
             </div>
-            <div class="productprijs">
-              <div class="productprijsknop"><p>&euro;10,50</p></div>
-            </div>
           </div>
-          <div class="product">
-            <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-            <div class="producttekst">
-            <h4>product1</h4>
-            <p>heel lekker sushi</p>
-          </div>
-          <div class="productprijs">
-            <div class="productprijsknop"><p>&euro;10,50</p></div>
-          </div>
-        </div>
-        <div class="product">
-          <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-          <div class="producttekst">
-          <h4>product1</h4>
-          <p>heel lekker sushi</p>
-        </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
-        <div class="producttekst">
-        <h4>product1</h4>
-        <p>heel lekker sushi</p>
-      </div>
-        <div class="productprijs">
-          <div class="productprijsknop"><p>&euro;10,50</p></div>
-        </div>
-      </div>
+
+          <?php
+            }
+          ?>
         </div>
         <div class="dinerkaart">
           <div class="dinertekst">
           <h2>dinerkaart</h2>
         </div>
+        <?php
+            include_once("connect.php");
+
+            $query = "SELECT * FROM dinergerechten";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+
+            foreach($result as $product) {
+          ?>
+            <div class="product">
+              <img src="<?php echo $product['plaatje']; ?>" alt="#">
+              <div class="producttekst">
+               <h4><?php echo $product['naam']?></h4>
+               <p><?php echo $product['beschrijving']?></p>
+              </div>
+             <div class="productprijs">
+              <div class="productprijsknop"><p>&euro;<?php echo $product["prijs"]?></p></div>
+            </div>
+          </div>
+
+          <?php
+            }
+          ?>
         <div class="product">
           <img src="pictures/sushi1.jpg" alt="sushi1" class="productPlaatje">
           <div class="producttekst">
@@ -499,7 +458,7 @@
     <div class="reserveertekst"><h1>reserveren</h1></div>
     <div class="grondvlak">
       <div class="reserveerform">
-        <form action="" method="post">
+        <form action="reserveerformData.php" method="post">
            <div class="naamaantaltel-form">
              <div class="naam-form">
               <label for="naam">naam</label> </br>
@@ -524,8 +483,8 @@
             <input type="datetime-local" name="date" id="date" min="2022-12-04T10:00" max="2023-12-31T23:00">
           </div>
         </div>
-          <input type="submit" name="verzend" value="verzenden">
-          <input type="hidden" value="" id="hidden_input" name="data-id">
+        <input type="hidden" value="" id="hidden_input" name="dataid">
+          <input type="submit" name="verzend" value="verzenden" id="submit">
         </form>
       </div>
       <div class="reserveererea">
