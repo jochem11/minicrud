@@ -40,6 +40,7 @@ const tafels = document.querySelectorAll(".tafel");
 const divcontainer = document.querySelector(".reserveercontainer");
 const divform = document.querySelector(".reserveerform");
 let hidden = document.querySelector("#hidden_input");
+let submit = document.querySelector("#submit");
 
 tafels.forEach((tafel) => {
   tafel.addEventListener("click", (e) => {
@@ -49,6 +50,9 @@ tafels.forEach((tafel) => {
     tafel.style.backgroundColor = "orange";
     hidden.value = dataAttribute;
     console.log("data-id: " + hidden.value);
+    submit.addEventListener("click", () => {
+      tafel.backgroundColor = "red";
+    });
     window.onclick = (e) => {
       if (e.target === divcontainer) {
         divform.style.display = "none";

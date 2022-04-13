@@ -376,7 +376,7 @@
             foreach($result as $product) {
           ?>
             <div class="product">
-              <img src="<?php echo $product['plaatje']; ?>" alt="#">
+              <img src="../pictures/<?php echo $product['plaatje']; ?>" alt="#">
               <div class="producttekst">
                <h4><?php echo $product['naam']?></h4>
                <p><?php echo $product['beschrijving']?></p>
@@ -594,11 +594,11 @@
     <div class="contactvlak">
       <div class="contacttekst"><h1>contact</h1></div>
       <div class="contactform">
-        <form action="" method="post">
+        <form action="contactDB.php" method="post">
           <label for="naam">naam: </label> </br>
           <input type="text" name="naam" id="naam" placeholder="naam:"> </br>
-          <label for="e-mail">e-mail: </label> </br>
-          <input type="email" name="e-mail" id="e-mail" placeholder="e-mail"> </br>
+          <label for="eMail">e-mail: </label> </br>
+          <input type="email" name="eMail" id="eMail" placeholder="e-mail"> </br>
           <label for="bericht">bericht</label> </br>
           <textarea name="bericht" id="bericht" cols="30" rows="10" placeholder="bericht:"></textarea> </br>
           <input type="submit" placeholder="verzenden" name="verzend">

@@ -19,3 +19,5 @@ $stmt->bindParam(":date", $_POST['date']);
 $stmt->bindParam(":dataid", $_POST['dataid']);
 
 $stmt->execute();
+
+header("Location: index.php");
