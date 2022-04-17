@@ -69,7 +69,9 @@ let login = document.querySelector("#login");
 
 login.addEventListener("click", (e) => {
   logincontainer.style.display = "block";
-  logincontainer.addEventListener("click", (e) => {
-    logincontainer.style.display = "none";
-  });
+  window.onclick = (e) => {
+    if (e.target === logincontainer) {
+      logincontainer.style.display = "none";
+    }
+  };
 });

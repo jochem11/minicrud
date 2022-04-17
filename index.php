@@ -25,7 +25,7 @@
       include("header.php");
     ?> 
     <main>
-      <div class="slideshow-container">
+      <div class="slideshow-container" id="begin">
         <div class="mySlides fade">
           <img
             src="pictures/restourant1.jpg "
@@ -319,7 +319,7 @@
         </div>
        
       </div>
-      <div class="menukaart">
+      <div class="menukaart" id="menukaart">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 318"
@@ -455,8 +455,8 @@
         d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,117.3C560,117,640,171,720,165.3C800,160,880,96,960,96C1040,96,1120,160,1200,170.7C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
       ></path>
     </svg>
-    <div class="reserveertekst"><h1>reserveren</h1></div>
-    <div class="grondvlak">
+    <div class="reserveertekst" id="reserveren"><h1>reserveren</h1></div>
+    <div class="grondvlak" >
       <div class="reserveerform">
         <form action="reserveerformData.php" method="post">
            <div class="naamaantaltel-form">
@@ -579,7 +579,7 @@
 
   </div>
     </div>
-    <div class="contact">
+    <div class="contact"  id="contact">
       <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 318"
@@ -608,7 +608,7 @@
     </div>
     <div class="logincontainer" id="logincontainer">
       <div class="loginveld">
-        <form action="" method="post" class="animate">
+        <form action="adminPHP.php" method="post" class="animate">
           <div class="containerplaatje">
             <img src="pictures/inlogplaatje.png" alt="inlogplaatje">
           </div>
@@ -617,7 +617,7 @@
             <input type="text" name="naam" placeholder="Naam: " required>
             <label for="pw"><b>wachtwoord</b></label>
             <input type="password" name="pw" placeholder="Wachtwoord: " required>
-            <button type="submit">Login</button>
+            <button type="submit" name="submit">Login</button>
             <label>
               <input type="checkbox" name="checkbox" checked="checked" name="remember_me"> remember me
             </label>
