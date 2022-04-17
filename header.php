@@ -11,7 +11,7 @@
       ><img src="pictures/logo.png" alt="logo" class="plaatjenavbar"
     /></a>
     <div class="linkjes">
-      <p><a href="inlog.php">login</a></p>
+      <p><a href="#" id="login">login</a></p>
     </div>
     <div class="linkjes">
       <p><a href="#">contact</a></p>

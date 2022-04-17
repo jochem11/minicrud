@@ -63,3 +63,13 @@ tafels.forEach((tafel) => {
     };
   });
 });
+
+let logincontainer = document.querySelector("#logincontainer");
+let login = document.querySelector("#login");
+
+login.addEventListener("click", (e) => {
+  logincontainer.style.display = "block";
+  logincontainer.addEventListener("click", (e) => {
+    logincontainer.style.display = "none";
+  });
+});

@@ -462,15 +462,15 @@
            <div class="naamaantaltel-form">
              <div class="naam-form">
               <label for="naam">naam</label> </br>
-              <input type="text" name="naam" id="naam" placeholder="naam: "> </br>
+              <input type="text" name="naam" id="naam" placeholder="naam: " required> </br>
              </div>
              <div class="aantal-form">
               <label for="aantal">aantal personen</label> </br>
-              <input type="number" name="aantal" id="aantal" placeholder="aantal: "> </br>
+              <input type="number" name="aantal" id="aantal" placeholder="aantal: " required> </br>
             </div>
             <div class="tel-form">
             <label for="tel">telefoonnummer</label> </br>
-            <input type="tel" name="tel" id="tel" placeholder="telefoonnummer: "></br>
+            <input type="tel" name="tel" id="tel" placeholder="telefoonnummer: " required></br>
           </div>
         </div>
           <div class="berichttijd-form">
@@ -480,7 +480,7 @@
             </div>
             <div class="tijd">
             <label for="date">tijd-datum</label> </br>
-            <input type="datetime-local" name="date" id="date" min="2022-12-04T10:00" max="2023-12-31T23:00">
+            <input type="datetime-local" name="date" id="date" min="2022-12-04T10:00" max="2023-12-31T23:00" required>
           </div>
         </div>
         <input type="hidden" value="" id="hidden_input" name="dataid">
@@ -605,6 +605,25 @@
         </form>
       </div>
     </div>
+    </div>
+    <div class="logincontainer" id="logincontainer">
+      <div class="loginveld">
+        <form action="" method="post" class="animate">
+          <div class="containerplaatje">
+            <img src="pictures/inlogplaatje.png" alt="inlogplaatje">
+          </div>
+          <div class="inlog">
+            <label for="naam"><b>Naam</b></label>
+            <input type="text" name="naam" placeholder="Naam: " required>
+            <label for="pw"><b>wachtwoord</b></label>
+            <input type="password" name="pw" placeholder="Wachtwoord: " required>
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" name="checkbox" checked="checked" name="remember_me"> remember me
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
 
       
