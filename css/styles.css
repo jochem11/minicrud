@@ -1274,7 +1274,11 @@
 }
 
 .id_reserveringen,
-.reserveercontainer_admin .id_reservering {
+.reserveercontainer_admin .id_reservering,
+.id_contacts,
+.reserveercontainer_admin .id_contact,
+.id_lunchgerechten,
+.reserveercontainer_admin .id_lunchgerecht {
   width: 5%;
   border-right: solid 2px black;
   padding-left: 2px;
@@ -1324,14 +1328,22 @@
 }
 
 .update_reserveringen,
-.reserveercontainer_admin .update_reservering {
+.reserveercontainer_admin .update_reservering,
+.update_contacts,
+.reserveercontainer_admin .update_contact,
+.update_lunchgerechten,
+.reserveercontainer_admin .update_lunchgerecht {
   width: 10%;
   border-right: solid 2px black;
   padding-left: 2px;
 }
 
 .delete_reserveringen,
-.reserveercontainer_admin .delete_reservering {
+.reserveercontainer_admin .delete_reservering,
+.delete_contacts,
+.reserveercontainer_admin .delete_contact,
+.delete_lunchgerechten,
+.reserveercontainer_admin .delete_lunchgerecht {
   width: 10%;
   padding-left: 2px;
 }
@@ -1357,13 +1369,68 @@
 }
 
 .reserveercontainer_admin .update_reservering button,
-.reserveercontainer_admin .delete_reservering button {
+.reserveercontainer_admin .delete_reservering button,
+.reserveercontainer_admin .delete_contact button,
+.reserveercontainer_admin .update_contact button,
+.reserveercontainer_admin .update_lunchgerecht button,
+.reserveercontainer_admin .delete_lunchgerecht button {
   width: 100%;
   height: 100%;
   background-color: #a8a8a8b4;
   cursor: pointer;
 }
 
-.reserveercontainer_admin .delete_reservering button {
+.reserveercontainer_admin .delete_reservering button,
+.reserveercontainer_admin .delete_contact button,
+.reserveercontainer_admin .delete_lunchgerecht button {
   background-color: red;
+}
+
+.eMail_contacts,
+.reserveercontainer_admin .eMail_contact {
+  width: 25%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.bericht_contacts,
+.reserveercontainer_admin .bericht_contact {
+  width: 35%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.naam_contacts,
+.reserveercontainer_admin .naam_contact {
+  border-right: solid 2px black;
+  padding-left: 2px;
+  width: 20%;
+}
+
+.naam_lunchgerechten,
+.reserveercontainer_admin .naam_lunchgerecht {
+  width: 15%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.plaatje_lunchgerechten,
+.reserveercontainer_admin .plaatje_lunchgerecht {
+  width: 15%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.prijs_lunchgerechten,
+.reserveercontainer_admin .prijs_lunchgerecht {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.beschrijving_lunchgerechten,
+.reserveercontainer_admin .beschrijving_lunchgerecht {
+  width: 35%;
+  border-right: solid 2px black;
+  padding-left: 2px;
 }
