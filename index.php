@@ -319,7 +319,7 @@
         </div>
        
       </div>
-      <div class="menukaart" id="menukaart">
+      <div class="menukaart" >
         <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 318"
@@ -331,7 +331,7 @@
           d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,117.3C560,117,640,171,720,165.3C800,160,880,96,960,96C1040,96,1120,160,1200,170.7C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
       </svg>
-      <div class="menutekst"><h1>menukaart</h1></div>
+      <div class="menutekst" id="menukaart"><h1>menukaart</h1></div>
       <div class="producten">
         <div class="lunchkaart">
         <div class="lunchtekst"><h2>lunchkaart</h2></div>
@@ -347,7 +347,7 @@
             foreach($result as $product) {
           ?>
             <div class="product">
-              <img src="<?php echo $product['plaatje']; ?>" alt="#">
+              <img src="pictures/<?php echo $product['plaatje']; ?>" alt="#">
               <div class="producttekst">
                <h4><?php echo $product['naam']?></h4>
                <p><?php echo $product['beschrijving']?></p>
@@ -480,7 +480,13 @@
             </div>
             <div class="tijd">
             <label for="date">tijd-datum</label> </br>
-            <input type="datetime-local" name="date" id="date" min="2022-12-04T10:00" max="2023-12-31T23:00" required>
+            <?php
+              $mindate = date("Y-m-d");
+              $mintime = date("h:i");
+              $min = $mindate."T".$mintime;
+              $maxdate = date("Y-m-d", strtotime("+21 Days"));
+            ?>
+            <input type="datetime-local" name="date" id="date" min="<?php echo $min?>" max="<?php echo $maxdate?>T23:00" required>
           </div>
         </div>
         <input type="hidden" value="" id="hidden_input" name="dataid">
@@ -625,20 +631,6 @@
         </form>
       </div>
     </div>
-
-      
-
-
-      <!--<form action="test.php" method="post">
-        <p>typ je voornaam</p>
-        <input type="text" placeholder="naam.." name="naam" />
-        <p>typ hier je wachtwoord</p>
-        <input type="password" placeholder="wachtwoord" name="wachtwoord" />
-        <p>typ hier je leeftijd</p>
-        <input type="number" name="leeftijd" placeholder="leeftijd" />
-        <input type="submit" placeholder="verzenden" name="verzend" />
-      </form>
-    </main>-->
     </main>
     <?php
      include("footer.php")

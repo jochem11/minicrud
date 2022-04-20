@@ -10,10 +10,6 @@
   text-decoration: none;
 }
 
-body {
-  background-image: url("../pictures/indexachtergrond.jpg");
-}
-
 /*///////////////////////////////////////|
 -----------------navbar---------------   |
 /////////////////////////////////////////|*/
@@ -552,6 +548,12 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
+}
+
+.menukaart .producten .lunchkaart .product img,
+.menukaart .producten .dinerkaart .product img {
+  height: 100px;
+  width: 100px;
 }
 
 .menukaart .producten .lunchkaart .product .producttekst,
@@ -1230,4 +1232,138 @@ body {
   to {
     transform: scale(1);
   }
+}
+
+/*///////////////////////////////////////|
+------------------admin------------------|
+/////////////////////////////////////////|*/
+
+.hoofdtekst {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.reserveertekst_admin {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #33383b;
+  display: flex;
+  justify-content: center;
+}
+
+.reserveercontainer_admin {
+  width: 80%;
+  min-height: 600px;
+  height: 100%;
+  background-color: #92999f;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+.waartekst_admin {
+  height: 20px;
+  width: 80%;
+  background-color: #ccc;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.id_reserveringen,
+.reserveercontainer_admin .id_reservering {
+  width: 5%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.naam_reserveringen,
+.reserveercontainer_admin .naam_reservering {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.aantal_reserveringen,
+.reserveercontainer_admin .aantal_reservering {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.telnummer_reserveringen,
+.reserveercontainer_admin .telnummer_reservering {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.bericht_reserveringen,
+.reserveercontainer_admin .bericht_reservering {
+  width: 20%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+  overflow: auto;
+}
+
+.datum_reserveringen,
+.reserveercontainer_admin .datum_reservering {
+  width: 15%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.tafel_reserveringen,
+.reserveercontainer_admin .tafel_reservering {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.update_reserveringen,
+.reserveercontainer_admin .update_reservering {
+  width: 10%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.delete_reserveringen,
+.reserveercontainer_admin .delete_reservering {
+  width: 10%;
+  padding-left: 2px;
+}
+
+.reserveercontainer_admin input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.reserveercontainer_admin form {
+  display: flex;
+}
+
+.reserveercontainer_admin .reserveerRow {
+  background-color: white;
+  border-bottom: solid 1px black;
+}
+
+.reserveercontainer_admin .update_reservering {
+  border-right: solid 2px black;
+}
+
+.reserveercontainer_admin .update_reservering button,
+.reserveercontainer_admin .delete_reservering button {
+  width: 100%;
+  height: 100%;
+  background-color: #a8a8a8b4;
+  cursor: pointer;
+}
+
+.reserveercontainer_admin .delete_reservering button {
+  background-color: red;
 }
