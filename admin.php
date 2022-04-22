@@ -42,7 +42,7 @@
   </head>
   <body>
     <h1 class="hoofdtekst">admin page</h1>
-    <h2 class="hoofdtekst">back</h2>
+    <h2 class="hoofdtekst"><a href="index.php">back</a></h2>
     <main>
       <div class="reserveertekst_admin">
         <h2>reserveringen</h2>
@@ -333,48 +333,6 @@
             }
           ?>
       </div>
-      <div class="reserveertekst_admin">
-        <h2>accounts</h2>
-      </div>
-      <div class="waartekst_admin">
-        <div class="id_accounts">id</div>
-        <div class="naam_accounts">naam</div>
-        <div class="wachtwoord_accounts">wachtwoord</div>
-        <div class="update_accounts">update</div>
-        <div class="delete_accounts">delete</div>
-      </div>
-      <div class="reserveercontainer_admin">
-      <?php
-            $query = "SELECT * FROM accounts";
-
-            $stmt = $connect->prepare($query);
-            $stmt->execute();
-            $result =$stmt->fetchAll();
-            foreach($result as $account) { 
-          ?>
-          <div class="reserveerRow">
-            <form action="admin_accounts.php" method="post">
-              <div class="id_account">
-                <input type="text" name="ID" value="<?php echo $account["ID"]?>" readonly>
-              </div>
-              <div class="naam_account">
-                <input type="text" name="naam" value="<?php echo $account["naam"]?>">
-              </div>
-              <div class="wachtwoord_account">
-                <input type="text" name="wachtwoord" value="<?php echo $account["wachtwoord"]?>">
-              </div>
-              <div class="update_account">
-                <button type="submit" name="update">update</button>
-              </div>
-              <div class="delete_account">
-                <button type="submit" name="delete">delete</button>
-              </div>
-            </form>
-          </div>
-          <?php
-            }
-          ?>
-      </div>
       <div class="newcontainer">
         <div class="newreserveer">
           <form action="reserveerformData.php" method="post">
@@ -425,6 +383,82 @@
             <button type="submit" name="admin">send</button>
           </form>
       </div>
+      </div>
+      <div class="reserveertekst_admin">
+        <h2>accounts</h2>
+      </div>
+      <div class="searchbar">
+        <form method="post">
+          <input type="text" name="search">
+          <button type="submit" name="zoeken">search</button>
+        </form>
+      </div>
+      <div class="waartekst_admin">
+        <div class="id_accounts">id</div>
+        <div class="naam_accounts">naam</div>
+        <div class="wachtwoord_accounts">wachtwoord</div>
+        <div class="update_accounts">update</div>
+        <div class="delete_accounts">delete</div>
+      </div>
+      <div class="reserveercontainer_admin">
+      <?php
+      include_once("connect.php");
+
+      global $connect;
+
+      $query = "";
+
+      $error = "";
+
+      if(isset($_POST["zoeken"])) {
+        if (!empty($_POST["search"])) {
+          $query = "SELECT * FROM accounts WHERE naam like '%".$_POST["search"]."%'";
+          return;
+        } else {
+          $query = "SELECT * FROM accounts";
+        }
+      } else echo "no";
+
+      function showAllProducts() {
+        global $connect, $error, $query;
+        $result = $connect->prepare($query);
+        $result->execute();
+        if (!empty($query));
+        foreach($result as $account) { 
+          ?>
+          <div class="reserveerRow">
+            <form action="admin_accounts.php" method="post">
+              <div class="id_account">
+                <input type="text" name="ID" value="<?php echo $account["ID"]?>" readonly>
+              </div>
+              <div class="naam_account">
+                <input type="text" name="naam" value="<?php echo $account["naam"]?>">
+              </div>
+              <div class="wachtwoord_account">
+                <input type="text" name="wachtwoord" value="<?php echo $account["wachtwoord"]?>">
+              </div>
+              <div class="update_account">
+                <button type="submit" name="update">update</button>
+              </div>
+              <div class="delete_account">
+                <button type="submit" name="delete">delete</button>
+              </div>
+            </form>
+          </div>
+          <?php
+            } 
+          }
+          if(isset($_POST["zoeken"])) {
+            if (!empty($_POST["search"])) {
+              $query = "SELECT * FROM accounts WHERE naam LIKE '%".$_POST["search"]."%'";
+              return;
+            } else {
+              echo showAllProducts(); 
+            }
+          }
+          
+          ?>
+      
       </div>
     </main>
   </body>

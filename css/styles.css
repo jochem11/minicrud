@@ -1461,6 +1461,24 @@
   padding-left: 2px;
 }
 
+.searchbar {
+  width: 80%;
+  height: 40px;
+  background-color: blue;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchbar form {
+  display: flex;
+}
+
+.searchbar input {
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+}
+
 .naam_accounts,
 .reserveercontainer_admin .naam_account {
   width: 40%;

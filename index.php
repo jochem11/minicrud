@@ -376,7 +376,7 @@
             foreach($result as $product) {
           ?>
             <div class="product">
-              <img src="../pictures/<?php echo $product['plaatje']; ?>" alt="#">
+              <img src="pictures/<?php echo $product['plaatje']; ?>" alt="#">
               <div class="producttekst">
                <h4><?php echo $product['naam']?></h4>
                <p><?php echo $product['beschrijving']?></p>
