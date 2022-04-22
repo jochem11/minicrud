@@ -1,3 +1,11 @@
+<?php 
+  session_start();
+
+  if(!isset($_SESSION['username'])) {
+    header('Location: index.php');
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,6 +42,7 @@
   </head>
   <body>
     <h1 class="hoofdtekst">admin page</h1>
+    <h2 class="hoofdtekst">back</h2>
     <main>
       <div class="reserveertekst_admin">
         <h2>reserveringen</h2>
@@ -224,7 +233,7 @@
                     <div class="plaatje_lunchgerecht">
                         <input
                          type="text"
-                         name="plaajte"
+                         name="plaatje"
                          value="<?php echo $lunchgerecht['plaatje']?>"
                          />
                     </div>
@@ -253,6 +262,169 @@
           <?php
             }
           ?>
+      </div>
+      <div class="reserveertekst_admin">
+        <h2>dinergerechten</h2>
+      </div>
+      <div class="waartekst_admin">
+        <div class="id_dinergerechten">id</div>
+        <div class="naam_dinergerechten">naam</div>
+        <div class="plaatje_dinergerechten">plaajte</div>
+        <div class="prijs_dinergerechten">prijs</div>
+        <div class="beschrijving_dinergerechten">beschrijving</div>
+        <div class="update_dinergerechten">update</div>
+        <div class="delete_dinergerechten">delete</div>
+      </div>
+      <div class="reserveercontainer_admin">
+          <?php
+            $query = "SELECT * FROM dinergerechten";
+
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result =$stmt->fetchAll();
+            foreach($result as $dinergerecht) { 
+          ?>
+          <div class="reserveerRow">
+            <form action="admin_dinergerechtenDB.php" method="post">
+              <div class="id_dinergerecht">
+                <input
+                 type="text"
+                 name="ID"
+                 value="<?php echo $dinergerecht['ID']?>"
+                 readonly
+                 >
+              </div>
+              <div class="naam_dinergerecht">
+                <input
+                 type="text"
+                 name="naam"
+                 value="<?php echo $dinergerecht['naam']?>"
+                 >
+              </div>
+              <div class="plaatje_dinergerecht">
+                <input
+                 type="text"
+                 name="plaatje"
+                 value="<?php echo $dinergerecht["plaatje"]?>"
+                 >
+              </div>
+              <div class="prijs_dinergerecht">
+                <input
+                 type="text"
+                 name="prijs"
+                 value="<?php echo $dinergerecht["prijs"]?>"
+                 >
+              </div>
+              <div class="beschrijving_dinergerecht">
+                <input
+                 type="text"
+                 name="beschrijving"
+                 value="<?php echo $dinergerecht["beschrijving"]?>">
+              </div>
+              <div class="update_dinergerecht">
+                 <button type="submit" name="update">update</button>
+              </div>
+              <div class="delete_dinergerecht">
+                 <button type="submit" name="delete">delete</button>
+              </div>
+            </form>
+          </div>
+          <?php
+            }
+          ?>
+      </div>
+      <div class="reserveertekst_admin">
+        <h2>accounts</h2>
+      </div>
+      <div class="waartekst_admin">
+        <div class="id_accounts">id</div>
+        <div class="naam_accounts">naam</div>
+        <div class="wachtwoord_accounts">wachtwoord</div>
+        <div class="update_accounts">update</div>
+        <div class="delete_accounts">delete</div>
+      </div>
+      <div class="reserveercontainer_admin">
+      <?php
+            $query = "SELECT * FROM accounts";
+
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result =$stmt->fetchAll();
+            foreach($result as $account) { 
+          ?>
+          <div class="reserveerRow">
+            <form action="admin_accounts.php" method="post">
+              <div class="id_account">
+                <input type="text" name="ID" value="<?php echo $account["ID"]?>" readonly>
+              </div>
+              <div class="naam_account">
+                <input type="text" name="naam" value="<?php echo $account["naam"]?>">
+              </div>
+              <div class="wachtwoord_account">
+                <input type="text" name="wachtwoord" value="<?php echo $account["wachtwoord"]?>">
+              </div>
+              <div class="update_account">
+                <button type="submit" name="update">update</button>
+              </div>
+              <div class="delete_account">
+                <button type="submit" name="delete">delete</button>
+              </div>
+            </form>
+          </div>
+          <?php
+            }
+          ?>
+      </div>
+      <div class="newcontainer">
+        <div class="newreserveer">
+          <form action="reserveerformData.php" method="post">
+            <h2>reserveren</h2>
+            <input type="text" name="naam" placeholder="naam" required>
+            <input type="number" name="aantal" placeholder="aantal" required>
+            <input type="text" name="tel" placeholder="tel" required>
+            <textarea name="bericht" id="" cols="30" rows="10" placeholder="bericht"></textarea>
+            <input type="datetime-local" name="date" required>
+            <input type="text" name="dataid" placeholder="tafel" required> </br>
+            <button type="submit" name="admin">send</button>
+          </form>
+        </div>
+        <div class="newreserveer">
+          <form action="contactDB.php" method="post">
+            <h2>contact</h2>
+            <input type="text" name="naam" placeholder="naam" required>
+            <input type="text" name="eMail" placeholder="e-mail" required>
+            <textarea name="bericht" cols="30" rows="10" placeholder="bericht"></textarea> </br>
+            <button type="submit" name="admin">send</button>
+          </form>
+      </div>
+      <div class="newreserveer">
+          <form action="newLunch.php" method="post">
+            <h2>lunchgerecht</h2>
+            <input type="text" name="naam" placeholder="naam" required>
+            <input type="file" name="plaatje" placeholder="plaatje" required>
+            <input type="text" name="prijs" placeholder="prijs" required>
+            <textarea name="beschrijving" cols="30" rows="10" placeholder="beschrijving"></textarea> </br>
+            <button type="submit" name="admin">send</button>
+          </form>
+      </div>
+      <div class="newreserveer">
+          <form action="newDiner.php" method="post">
+            <h2>dinergerechten</h2>
+            <input type="text" name="naam" placeholder="naam" required>
+            <input type="file" name="plaatje" placeholder="plaatje" required>
+            <input type="text" name="prijs" placeholder="prijs" required>
+            <textarea name="beschrijving" cols="30" rows="10" placeholder="beschrijving"></textarea> </br>
+            <button type="submit" name="admin">send</button>
+          </form>
+      </div>
+      <div class="newreserveer">
+          <form action="newAcc.php" method="post">
+            <h2>account</h2>
+            <input type="text" name="naam" placeholder="naam" required>
+            <input type="text" name="ww" placeholder="ww" required> </br>
+            <button type="submit" name="admin">send</button>
+          </form>
+      </div>
       </div>
     </main>
   </body>

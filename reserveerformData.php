@@ -20,4 +20,8 @@ $stmt->bindParam(":dataid", $_POST['dataid']);
 
 $stmt->execute();
 
+if (isset($_POST['admin'])) {
+    header("location: admin.php");
+} else {
 header("Location: index.php");
+}

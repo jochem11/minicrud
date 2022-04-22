@@ -14,4 +14,8 @@ $stmt->bindParam(":bericht", $_POST['bericht']);
 
 $stmt->execute();
 
+if (isset($_POST['admin'])) {
+    header("location: admin.php");
+} else {
 header("Location: index.php");
+}

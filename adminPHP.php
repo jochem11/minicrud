@@ -13,10 +13,8 @@
         if (isset($_POST['submit']) && !empty($_POST['naam']) && !empty($_POST['pw'])) {
             if ($_POST['naam'] == $account['naam'] &&
             $_POST['pw'] == $account['wachtwoord']) {
-                $_SESSION['valid'] = true;
-                $_SESSION['timeout'] = time();
+                session_start();
                 $_SESSION['username'] = 'admin';
-
                 header("Location: admin.php");
             } else {
                 $msg = 'wtf u doin??';;

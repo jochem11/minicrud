@@ -1278,7 +1278,11 @@
 .id_contacts,
 .reserveercontainer_admin .id_contact,
 .id_lunchgerechten,
-.reserveercontainer_admin .id_lunchgerecht {
+.reserveercontainer_admin .id_lunchgerecht,
+.id_dinergerechten,
+.reserveercontainer_admin .id_dinergerecht,
+.id_accounts,
+.reserveercontainer_admin .id_account {
   width: 5%;
   border-right: solid 2px black;
   padding-left: 2px;
@@ -1332,7 +1336,11 @@
 .update_contacts,
 .reserveercontainer_admin .update_contact,
 .update_lunchgerechten,
-.reserveercontainer_admin .update_lunchgerecht {
+.reserveercontainer_admin .update_lunchgerecht,
+.update_dinergerechten,
+.reserveercontainer_admin .update_dinergerecht,
+.update_accounts,
+.reserveercontainer_admin .update_account {
   width: 10%;
   border-right: solid 2px black;
   padding-left: 2px;
@@ -1343,7 +1351,11 @@
 .delete_contacts,
 .reserveercontainer_admin .delete_contact,
 .delete_lunchgerechten,
-.reserveercontainer_admin .delete_lunchgerecht {
+.reserveercontainer_admin .delete_lunchgerecht,
+.delete_dinergerechten,
+.reserveercontainer_admin .delete_dinergerecht,
+.delete_accounts,
+.reserveercontainer_admin .delete_account {
   width: 10%;
   padding-left: 2px;
 }
@@ -1373,7 +1385,11 @@
 .reserveercontainer_admin .delete_contact button,
 .reserveercontainer_admin .update_contact button,
 .reserveercontainer_admin .update_lunchgerecht button,
-.reserveercontainer_admin .delete_lunchgerecht button {
+.reserveercontainer_admin .delete_lunchgerecht button,
+.reserveercontainer_admin .delete_dinergerecht button,
+.reserveercontainer_admin .update_dinergerecht button,
+.reserveercontainer_admin .delete_account button,
+.reserveercontainer_admin .update_account button {
   width: 100%;
   height: 100%;
   background-color: #a8a8a8b4;
@@ -1382,7 +1398,9 @@
 
 .reserveercontainer_admin .delete_reservering button,
 .reserveercontainer_admin .delete_contact button,
-.reserveercontainer_admin .delete_lunchgerecht button {
+.reserveercontainer_admin .delete_lunchgerecht button,
+.reserveercontainer_admin .delete_dinergerecht button,
+.reserveercontainer_admin .delete_account button {
   background-color: red;
 }
 
@@ -1408,29 +1426,103 @@
 }
 
 .naam_lunchgerechten,
-.reserveercontainer_admin .naam_lunchgerecht {
+.reserveercontainer_admin .naam_lunchgerecht,
+.naam_dinergerechten,
+.reserveercontainer_admin .naam_dinergerecht {
   width: 15%;
   border-right: solid 2px black;
   padding-left: 2px;
 }
 
 .plaatje_lunchgerechten,
-.reserveercontainer_admin .plaatje_lunchgerecht {
+.reserveercontainer_admin .plaatje_lunchgerecht,
+.plaatje_dinergerechten,
+.reserveercontainer_admin .plaatje_dinergerecht {
   width: 15%;
   border-right: solid 2px black;
   padding-left: 2px;
 }
 
 .prijs_lunchgerechten,
-.reserveercontainer_admin .prijs_lunchgerecht {
+.reserveercontainer_admin .prijs_lunchgerecht,
+.prijs_dinergerechten,
+.reserveercontainer_admin .prijs_dinergerecht {
   width: 10%;
   border-right: solid 2px black;
   padding-left: 2px;
 }
 
 .beschrijving_lunchgerechten,
-.reserveercontainer_admin .beschrijving_lunchgerecht {
+.reserveercontainer_admin .beschrijving_lunchgerecht,
+.beschrijving_dinergerechten,
+.reserveercontainer_admin .beschrijving_dinergerecht {
   width: 35%;
   border-right: solid 2px black;
   padding-left: 2px;
+}
+
+.naam_accounts,
+.reserveercontainer_admin .naam_account {
+  width: 40%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.wachtwoord_accounts,
+.reserveercontainer_admin .wachtwoord_account {
+  width: 35%;
+  border-right: solid 2px black;
+  padding-left: 2px;
+}
+
+.new_button {
+  width: 80%;
+  height: 50px;
+  background-color: lightcoral;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.new_button h2 {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.newcontainer {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 500px;
+  height: 100%;
+  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.newreserveer {
+  width: 350px;
+  height: fit-content;
+  background-color: white;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  .reserveertekst_admin {
+    width: 100%;
+  }
+  .waartekst_admin {
+    width: 100%;
+  }
+  .reserveercontainer_admin {
+    width: 100%;
+  }
+  .newcontainer {
+    width: 100%;
+  }
 }
